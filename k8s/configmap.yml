@@ -1,6 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: zenorta-configmap
-data:
-  message: "Do not eat the yellow snow!"
