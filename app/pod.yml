@@ -1,0 +1,11 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: zenorta-pod
+  labels:
+    app: motd
+spec:
+  containers:
+  - name: motd
+    image: zenorta/motd-api
