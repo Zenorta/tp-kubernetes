@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: zenorta-deployment-canary
+  name: zenorta-deployment
   labels:
     app: motd
 spec:
@@ -17,9 +17,3 @@ spec:
       containers:
       - name: motd
         image: zenorta/motd-api
-        env:
-        - name: MESSAGE
-          valueFrom:
-            configMapKeyRef:
-              name: zenorta-configmap
-              key: message

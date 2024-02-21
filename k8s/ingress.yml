@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: zenorta-ingress
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: thibaud-pate.amnay.fr
+    http:
+      paths:
+      - path: /motd
+        pathType: Prefix
+        backend:
+          service:
+            name: zenorta-service
+            port:
+              number: 80
